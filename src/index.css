@@ -1,0 +1,313 @@
+:root {
+  --bg: #f5f7fb;
+  --surface: #ffffff;
+  --surface-soft: #eef3ff;
+  --text: #172033;
+  --muted: #5c6784;
+  --border: #dbe3f1;
+  --primary: #1f5eff;
+  --primary-dark: #184bd0;
+  --success: #0f9d58;
+  --shadow: 0 10px 30px rgba(20, 32, 61, 0.08);
+  --max-width: 1180px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.container {
+  width: min(100% - 32px, var(--max-width));
+  margin: 0 auto;
+}
+
+/* ================= NAVBAR ================= */
+
+.navbar {
+  position: sticky;
+  top: 0;
+  background: rgba(245, 247, 251, 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border);
+}
+
+.nav-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 70px;
+}
+
+.brand {
+  font-weight: 800;
+}
+
+.brand span {
+  color: var(--primary);
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.nav-cta {
+  background: var(--primary);
+  color: white;
+  padding: 10px 16px;
+  border-radius: 10px;
+  border: none;
+}
+
+/* ================= HERO ================= */
+
+.hero {
+  padding: 60px 0;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 30px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.hero-description {
+  color: var(--muted);
+}
+
+.hero-actions {
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+}
+
+.primary-btn {
+  background: var(--primary);
+  color: white;
+  padding: 12px 18px;
+  border-radius: 10px;
+}
+
+.secondary-btn {
+  border: 1px solid var(--border);
+  padding: 12px 18px;
+  border-radius: 10px;
+}
+
+/* ================= STATS ================= */
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
+
+.stat-card {
+  background: white;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+}
+
+/* ================= SEARCH ================= */
+
+.search-bar {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  margin-top: 15px;
+}
+
+/* ================= WORKSHOP ================= */
+
+.workshop-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+/* CARD */
+
+.workshop-card {
+  background: white;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: var(--shadow);
+  transition: 0.3s;
+}
+
+.workshop-card:hover {
+  transform: translateY(-5px);
+}
+
+/* TOP ROW */
+
+.card-badge-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.badge {
+  background: #e8efff;
+  color: var(--primary);
+  padding: 5px 10px;
+  border-radius: 999px;
+  font-size: 0.8rem;
+}
+
+.mode {
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+/* TITLE */
+
+.card-title {
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+}
+
+/* DESCRIPTION */
+
+.workshop-description {
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin-bottom: 15px;
+}
+
+/* DETAILS */
+
+.card-details {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  background: var(--surface-soft);
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.detail-label {
+  font-size: 0.7rem;
+  color: var(--muted);
+}
+
+/* BUTTON */
+
+.card-btn {
+  background: var(--primary);
+  color: white;
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: none;
+}
+
+/* ================= FEATURES ================= */
+
+.feature-card {
+  background: white;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+  margin-bottom: 15px;
+}
+
+/* ================= CTA ================= */
+
+.cta-box {
+  background: linear-gradient(135deg, #1f5eff, #5a8cff);
+  color: white;
+  padding: 30px;
+  border-radius: 20px;
+}
+
+/* ================= FOOTER ================= */
+
+.footer {
+  background: #0f172a;
+  color: white;
+  padding: 30px 0;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 900px) {
+  .hero-grid,
+  .stats-grid,
+  .workshop-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .card-details {
+    grid-template-columns: 1fr;
+  }
+}
+.card-btn:hover {
+  background: var(--primary-dark);
+  transform: scale(1.05);
+}
+/* ================= LOGIN ================= */
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px;
+}
+
+.login-card {
+  background: var(--surface);
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: var(--shadow);
+  width: 100%;
+  max-width: 400px;
+}
+
+.login-card h2 {
+  margin-bottom: 20px;
+}
+
+.login-input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+}
+
+.login-btn {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  background: var(--primary);
+  color: white;
+  font-weight: 600;
+}
+
+.login-footer {
+  margin-top: 10px;
+  font-size: 0.9rem;
+}
+
+.login-footer span {
+  color: var(--primary);
+  font-weight: 600;
+}
