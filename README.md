@@ -112,7 +112,7 @@ The redesigned interface focuses on **clarity, accessibility, and faster booking
 
 ```bash
 # Clone the repository
-git clone https://github.com/priyanjall/workshop-ui-redesign
+git clone https://github.com/prajwallsahu/workshop-ui-redesign
 
 # Go to project folder
 cd workshop-ui-redesign
